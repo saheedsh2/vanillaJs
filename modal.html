@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        border: 1px solid #000;
+        background-color: #fff;
+        box-shadow: 5px 5px #000;
+        width: 80%;
+        max-width: 800px;
+        padding: 20px;
+        transform: translate(-50%, -50%);
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal js-modal">
+      <h2>This is the title</h2>
+      <p>The quick brown fox jumps over the lazy dog</p>
+      <p>The quick brown fox jumps over the lazy dog</p>
+      <p>The quick brown fox jumps over the lazy dog</p>
+      <p>The quick brown fox jumps over the lazy dog</p>
+      <p>The quick brown fox jumps over the lazy dog</p>
+      <p>The quick brown fox jumps over the lazy dog</p>
+      <p>The quick brown fox jumps over the lazy dog</p>
+      <button class="closeBtn">Close</button>
+    </div>
+
+    <button class="js-open-modal">OPEN Modal</button>
+
+    <script>
+      class Modal {
+        constructor() {
+          this.modal = document.querySelector(".modal");
+        }
+
+        open() {
+          this.modal.style.display = "initial";
+        }
+
+        close() {
+          this.modal.style.display = "none";
+        }
+      }
+      const openBtn = document.querySelector(".js-open-modal");
+      const closeBtn = document.querySelector(".closeBtn");
+      const modal = new Modal();
+      openBtn.addEventListener("click", function (e) {
+        modal.open();
+      });
+      closeBtn.addEventListener("click", function (event) {
+        modal.close();
+      });
+    </script>
+  </body>
+</html>

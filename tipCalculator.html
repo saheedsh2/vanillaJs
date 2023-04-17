@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    Bill Amount: 
+    <input type="number" id="amount" />
+    <br />
+    <br />
+
+    Tip Amount as %: 
+
+    <input type="number" id="tip" />
+    <br />
+    <br />
+
+    <button onclick="calcTipandTotal()">Calculate Tip</button>
+
+    Tip is<h4 id="totalTip"></h4>
+
+
+
+
+    <script>
+
+        var billAmount = document.getElementById("amount");
+        var tipAmount = document.getElementById("tip");
+        var totalTip = document.getElementById('totalTip');
+        
+
+
+        const calcTipandTotal = () => {
+            bill = Number(billAmount.value)
+            tip = Number(tipAmount.value)
+
+
+        
+
+            total = bill + tip
+            console.log(total);
+            totalTip.innerText = total.toFixed(2)
+
+            return total;
+
+            
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>

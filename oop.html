@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+    <script>
+        class Person {
+            constructor(name, age, food){
+                this.name = name;
+                this.age = 33;
+                this.food = food
+
+            }
+
+            makeSound(){
+                console.log(
+                    this.name + 
+                    " is "
+                     + this.age +
+                     " and loves to eat "
+                     + this.food  
+                );
+            }
+           
+        }
+        const Caleb = new Person('Caleb', 33, 'salad');
+        Caleb.makeSound();
+        const shittu = new Person('shittu', 38, 'amala');
+        shittu.makeSound();
+    </script>
+</body>
+</html>
