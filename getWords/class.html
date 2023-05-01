@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        class Person {
+            constructor(name, age, height){
+                this.name = name
+                this.age = age
+                this.height = height
+                console.log(`My name is ${name}, I am ${age} years Old and I am ${height} tall`)
+
+            }
+
+
+            makeSound() {
+                console.log(
+                    this.name + 
+                    " says mmm to " + 
+                    this.food
+                )
+            }
+
+        }
+
+        const saheed = new Person('saheed', 38, 166)
+        saheed.makeSound()
+    </script>
+    
+</body>
+</html>

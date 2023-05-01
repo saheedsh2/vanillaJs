@@ -1,0 +1,51 @@
+
+
+body{
+    background-color: aqua;
+}
+
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: yellow;
+}
+
+.eye{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: black;
+  
+    margin: 10px;
+}
+
+
+.eye-container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-top: 22px;
+}
+
+.sad-mouth{
+    width: 50px;
+    height: 25px;
+    background-color: yellow;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border: 10px solid black;
+    border-bottom: 0px;
+    margin-left: 15px;
+}
+
+.happy-mouth{
+    width: 50px;
+    height: 25px;
+    background-color: yellow;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    border: 10px solid black;
+    border-bottom: 0px;
+    margin-left: 15px;
+}

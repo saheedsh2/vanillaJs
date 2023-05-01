@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+</head>
+<body>
+
+
+
+
+    <div class="wrapper">
+        <div class="buttons">
+            <button class="rpsButton" value="Rock">Rock</button>
+            <button class="rpsButton" value="Paper">Paper</button>
+            <button class="rpsButton" value="Scissors">Scissors</button>
+
+
+
+        </div>
+
+
+        <div class="resultContainer">
+            <div id="player-score"></div>
+            <div id="hands"></div>
+            <div id="result"></div>
+            <div id="endGameButton"></div>
+
+        </div>
+
+    </div>
+    
+
+
+
+
+
+
+    <script>
+          
+
+        function getComputerChoice(){
+            const rpsChoice = ['Rock', 'Paper', 'Scissors'];
+
+            const randomNumber = Math.floor(Math.random() * rpsChoice.length)
+            return rpsChoice[randomNumber]
+
+
+        }
+
+
+        function getResult(playerChoice, computerChoice){
+            let score; 
+
+            if(playerChoice == computerChoice){
+                score = 0
+            }
+
+            else if(playerChoice == 'Rock' && computerChoice == 'Scissors'){
+                score = 1
+            } else if (playerChoice == 'Paper' && computerChoice == 'Rock'){
+                score = 1
+            } else if (playerChoice == 'Scissors' && computerChoice == 'Paper'){
+                score = 1
+            } else {
+                score = -1
+            }
+
+            return score
+
+        }
+
+        function showResult(score, playerChoice, computerChoice){
+
+        }
+
+        function onClickRPS(playerChoice){
+            console.log(`Player Choice is ${playerChoice}`)
+            const computerChoice = getComputerChoice()
+            console.log(`Computer Choice is ${computerChoice}`)
+
+        }
+
+        function playGame() {
+            const rpsButtons = document.querySelectorAll('.rpsButton')
+
+            rpsButtons[0].onclick = () => console.log(rpsButtons[0].value)
+
+            rpsButtons.forEach(rpsButton => {
+                rpsButton.onclick = () => {
+                    onClickRPS(rpsButton.value)
+
+                }
+            })
+
+        }
+
+        function endGame () {
+
+        }
+
+        playGame()
+
+     
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
